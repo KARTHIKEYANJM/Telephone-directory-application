@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 4, 2021 7:23:24 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="mypack.Userdetails" table="userdetails" catalog="phonebook" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="Id" />
+            <generator class="identity" />
+        </id>
+        <property name="firstname" type="string">
+            <column name="Firstname" not-null="true" />
+        </property>
+        <property name="lastname" type="string">
+            <column name="Lastname" not-null="true" />
+        </property>
+        <property name="phoneNumber" type="string">
+            <column name="PhoneNumber" length="10" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="Address" not-null="true" />
+        </property>
+        <property name="city" type="string">
+            <column name="City" not-null="true" />
+        </property>
+        <property name="pin" type="string">
+            <column name="Pin" length="6" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
